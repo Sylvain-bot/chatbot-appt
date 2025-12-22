@@ -72,12 +72,12 @@ export default function Home() {
   const quickQuestions = [
     'Où sont les oreillers ?',
     'Comment fonctionne le chauffage ?',
-    'Quels restaurants recommandez-vous dans le quartier ?',
-    'Où puis-je trouver les draps supplémentaires ?',
+    'Comment faire marcher la machine à laver ?',
+    'Qu\'est-ce qu\'il y a au cinéma ce soir ?',
   ];
 
   return (
-    <div className="flex flex-col h-screen w-full bg-[#e5ddd5] md:max-w-4xl md:mx-auto md:shadow-lg">
+    <div className="flex flex-col h-screen w-full bg-[#e5ddd5] md:max-w-4xl md:mx-auto md:shadow-lg overflow-hidden">
       {/* Header */}
       <div className="bg-[#aa9592] text-white p-3 sm:p-4 shadow-md flex-shrink-0">
         <h1 className="text-lg sm:text-xl md:text-2xl font-bold">🏠 Assistant Appartement 5</h1>
