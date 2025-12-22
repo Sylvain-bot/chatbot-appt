@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code - Assistant Appartement</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #64748b;
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+        #qrcode {
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            display: inline-block;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .url-input {
+            width: 100%;
+            max-width: 500px;
+            padding: 15px;
+            font-size: 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            margin: 20px auto;
+            display: block;
+        }
+        .generate-btn {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+            transition: all 0.3s;
+        }
+        .generate-btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+        }
+        .download-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+            transition: all 0.3s;
+        }
+        .download-btn:hover {
+            background: #059669;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
+        }
+        .instructions {
+            text-align: left;
+            margin-top: 40px;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 10px;
+            border-left: 4px solid #2563eb;
+        }
+        .instructions h3 {
+            color: #2563eb;
+            margin-top: 0;
+        }
+        .instructions ol {
+            line-height: 1.8;
+        }
+        .emoji {
+            font-size: 48px;
+            margin: 20px 0;
+        }
+        .current-url {
+            background: #f1f5f9;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 20px 0;
+            font-family: monospace;
+            color: #475569;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="emoji">🏠</div>
+        <h1>Assistant Appartement</h1>
+        <p class="subtitle">Rue des Trois Rois</p>
+
+        <div class="current-url">
+            <strong>URL actuelle :</strong> <span id="current-url">Chargement...</span>
+        </div>
+
+        <input
+            type="text"
+            id="url-input"
+            class="url-input"
+            placeholder="Entrez l'URL Vercel de votre chatbot ici"
+        />
+
+        <button onclick="generateQR()" class="generate-btn">📱 Générer le QR Code</button>
+        <button onclick="downloadQR()" class="download-btn" id="download-btn" style="display: none;">⬇️ Télécharger</button>
+
+        <div id="qrcode"></div>
+
+        <div class="instructions">
+            <h3>📋 Instructions d'utilisation</h3>
+            <ol>
+                <li><strong>Déployez votre chatbot sur Vercel</strong> (voir DEPLOIEMENT.md)</li>
+                <li><strong>Copiez l'URL Vercel</strong> de votre chatbot (ex: https://chatbot-appartement.vercel.app)</li>
+                <li><strong>Collez l'URL</strong> dans le champ ci-dessus</li>
+                <li><strong>Cliquez sur "Générer le QR Code"</strong></li>
+                <li><strong>Téléchargez</strong> le QR code en haute résolution</li>
+                <li><strong>Imprimez-le</strong> et placez-le dans l'appartement</li>
+            </ol>
+
+            <h3>📍 Où placer le QR Code ?</h3>
+            <ul>
+                <li>Sur le réfrigérateur (aimanté)</li>
+                <li>Sur la table basse dans un cadre</li>
+                <li>Près de la porte d'entrée</li>
+                <li>Dans le livret d'accueil</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script>
+        let qrcode = null;
+
+        // Afficher l'URL actuelle
+        document.getElementById('current-url').textContent = window.location.origin;
+        document.getElementById('url-input').value = window.location.origin;
+
+        function generateQR() {
+            const url = document.getElementById('url-input').value.trim();
+
+            if (!url) {
+                alert('⚠️ Veuillez entrer une URL valide');
+                return;
+            }
+
+            // Vérifier si c'est une URL valide
+            try {
+                new URL(url);
+            } catch (e) {
+                alert('⚠️ URL invalide. Format attendu: https://votre-chatbot.vercel.app');
+                return;
+            }
+
+            // Effacer l'ancien QR code
+            document.getElementById('qrcode').innerHTML = '';
+
+            // Générer le nouveau QR code
+            qrcode = new QRCode(document.getElementById('qrcode'), {
+                text: url,
+                width: 300,
+                height: 300,
+                colorDark: '#2563eb',
+                colorLight: '#ffffff',
+                correctLevel: QRCode.CorrectLevel.H
+            });
+
+            // Afficher le bouton de téléchargement
+            document.getElementById('download-btn').style.display = 'inline-block';
+        }
+
+        function downloadQR() {
+            if (!qrcode) {
+                alert('⚠️ Veuillez d\'abord générer un QR code');
+                return;
+            }
+
+            const canvas = document.querySelector('#qrcode canvas');
+            if (canvas) {
+                const link = document.createElement('a');
+                link.download = 'qr-code-chatbot-appartement.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            }
+        }
+
+        // Générer automatiquement au chargement de la page
+        window.onload = function() {
+            generateQR();
+        };
+    </script>
+</body>
+</html>
