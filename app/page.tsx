@@ -80,7 +80,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex flex-col h-screen w-full bg-[#e5ddd5] md:max-w-4xl md:mx-auto md:shadow-lg overflow-hidden">
+    <div className="flex flex-col h-full w-full bg-[#e5ddd5] md:max-w-4xl md:mx-auto md:shadow-lg overflow-hidden">
       {/* Header */}
       <div className="bg-[#aa9592] text-white p-3 sm:p-4 shadow-md flex-shrink-0">
         <h1 className="text-lg sm:text-xl md:text-2xl font-bold">🏠 Assistant Appartement 5</h1>
