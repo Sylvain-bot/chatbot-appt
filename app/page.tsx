@@ -17,9 +17,12 @@ export default function Home() {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const messagesContainerRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (messagesContainerRef.current) {
+      messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+    }
   };
 
   useEffect(() => {
@@ -72,7 +75,7 @@ export default function Home() {
   const quickQuestions = [
     'Où sont les oreillers ?',
     'Comment fonctionne le chauffage ?',
-    'Comment faire marcher la machine à laver ?',
+    'Je veux laver mon linge',
     'Qu\'est-ce qu\'il y a au cinéma ce soir ?',
   ];
 
@@ -85,7 +88,7 @@ export default function Home() {
       </div>
 
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto bg-[#e5ddd5]">
+      <div ref={messagesContainerRef} className="flex-1 overflow-y-auto bg-[#e5ddd5]">
         <div className="p-3 sm:p-4 space-y-3 sm:space-y-4">
         {messages.map((message, index) => (
           <div
