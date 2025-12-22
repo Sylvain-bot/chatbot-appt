@@ -59,6 +59,9 @@ function needsWebSearch(question: string): boolean {
     'événement', 'evenement', 'spectacle', 'concert',
     'aujourd\'hui', "ce soir", 'demain', 'cette semaine',
     'actualité', 'actualite', 'news', 'info',
+    'adresse', 'où se trouve', 'ou se trouve', 'comment aller',
+    'itinéraire', 'plan', 'localisation', 'lieu',
+    'office du tourisme', 'mairie', 'poste', 'gare',
   ];
 
   const lowerQuestion = question.toLowerCase();
