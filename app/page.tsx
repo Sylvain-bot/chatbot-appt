@@ -88,8 +88,13 @@ export default function Home() {
       </div>
 
       {/* Messages */}
-      <div ref={messagesContainerRef} className="flex-1 overflow-y-auto bg-[#e5ddd5]">
-        <div className="p-3 sm:p-4 space-y-3 sm:space-y-4">
+      <div ref={messagesContainerRef} className="flex-1 overflow-y-auto bg-[#e5ddd5] relative">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-20 pointer-events-none"
+          style={{ backgroundImage: 'url(/app5.jpeg)' }}
+        />
+        <div className="p-3 sm:p-4 space-y-3 sm:space-y-4 relative z-10">
         {messages.map((message, index) => (
           <div
             key={index}
