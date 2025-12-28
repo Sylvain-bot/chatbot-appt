@@ -5,6 +5,7 @@ import { useState, useRef, useEffect } from 'react';
 interface Message {
   role: 'user' | 'assistant';
   content: string;
+  images?: string[];
 }
 
 export default function Home() {
@@ -73,8 +74,8 @@ export default function Home() {
   };
 
   const quickQuestions = [
+    'Dis m\'en plus sur l\'appartement',
     'Où sont les oreillers ?',
-    'Comment fonctionne le chauffage ?',
     'Je veux laver mon linge',
     'Qu\'est-ce qu\'il y a au cinéma ce soir ?',
   ];
@@ -112,6 +113,18 @@ export default function Home() {
               <p className="text-sm sm:text-base whitespace-pre-wrap break-words">
                 {message.content}
               </p>
+              {message.images && message.images.length > 0 && (
+                <div className="mt-2 space-y-2">
+                  {message.images.map((img, imgIndex) => (
+                    <img
+                      key={imgIndex}
+                      src={img}
+                      alt={`Image ${imgIndex + 1}`}
+                      className="rounded-lg max-w-full h-auto"
+                    />
+                  ))}
+                </div>
+              )}
               <span className={`text-[10px] sm:text-xs mt-1 block ${
                 message.role === 'user' ? 'text-white/70 text-right' : 'text-gray-500 text-right'
               }`}>

@@ -106,9 +106,22 @@ Station de taxi : ...
 Bibliothèque: En haut de la rue sur la place Saint Gervais
 Coiffeur: Barbier coiffeur pour homme sur la place Saint Gervais à 50m du logement. Kenneth le gérant est très agréable
 
+=== HISTOIRE DE L'IMMEUBLE ===
+Ce studio entièrement rénové en décembre 2025 prend place dans un ancien grenier, au dernier étage d’un bâtiment ancien chargé d’histoire.
+L’immeuble a longtemps été une grande maison familiale, avant d’être transformé en appartements il y a une trentaine d’années. En rez-de-chaussée, on y trouvait autrefois un atelier de réparation de matériel électronique, témoin de la vie commerçante du quartier.
+
+Le studio a été refait à neuf, avec une attention particulière portée au confort, à la luminosité et à l’optimisation de l’espace, tout en conservant le charme de l’existant.
+
+Situé dans le quartier Saint-Gervais à Avranches, vous profitez d’un environnement calme et authentique, à deux pas des commerces, restaurants et du centre-ville. Un emplacement idéal pour découvrir Avranches et la baie du Mont-Saint-Michel.
+Photos disponibles : appartement avant travaux.jpg, appartement avant travaux 2.jpg
+(Pour voir les photos historiques de l'immeuble, demandez-les au chatbot)
+
+=== COMMERCE AU REZ-DE-CHAUSSÉE ===
+[Vous pourrez compléter ce texte avec les informations sur le commerce à l'entrée de l'immeuble]
+
 === INFORMATIONS QUARTIER ===
-Caractéristiques du quartier : Le quartier Saint-Gervais est le cœur historique d’Avranches, avec ses ruelles anciennes, ses places animées et la basilique Saint-Gervais-et-Saint-Protais.
-Central et vivant, il mêle patrimoine, commerces de proximité et ambiance typique d’une ville normande à découvrir à pied.
+Caractéristiques du quartier : Le quartier Saint-Gervais est le cœur historique d'Avranches, avec ses ruelles anciennes, ses places animées et la basilique Saint-Gervais-et-Saint-Protais.
+Central et vivant, il mêle patrimoine, commerces de proximité et ambiance typique d'une ville normande à découvrir à pied.
 Attractions à proximité : ...
 Marchés : Le samedi matin, pour y aller, il faut remonter la rue de l'appartement et tourner à gauche devant la basilique Saint Gervais. (Petit conseil, essayer la nourriture du Petit Sihanouk)
 Parcs : ...

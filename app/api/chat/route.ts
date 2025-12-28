@@ -106,7 +106,9 @@ Instructions :
 - Pour les questions sur les environs (cinéma, restaurants, événements, météo, etc.), utilise les informations en temps réel si disponibles
 - Si tu ne trouves pas d'information dans l'inventaire pour une question sur le logement, dis-le clairement et suggère de contacter le propriétaire au 0651875143
 - Sois concis et précis dans tes réponses
-- Réponds en français`,
+- Réponds en français
+- Si ta réponse mentionne des photos disponibles dans l'inventaire, tu DOIS ajouter [IMAGE:nom-fichier.jpg] dans ta réponse pour chaque photo à afficher
+- Exemple: Si l'inventaire mentionne "Photos disponibles : immeuble-facade.jpg", tu dois écrire "Voici des photos de l'immeuble [IMAGE:immeuble-facade.jpg]"`,
     };
 
     // Filtrer pour enlever le message d'accueil initial (assistant)
@@ -122,9 +124,27 @@ Instructions :
       max_tokens: 500,
     });
 
-    const assistantMessage = completion.choices[0].message;
+    let assistantMessage = completion.choices[0].message;
 
-    return NextResponse.json({ message: assistantMessage });
+    // Extraire les images du message et les convertir en tableau
+    const imageRegex = /\[IMAGE:(.*?)\]/g;
+    const images: string[] = [];
+    let match;
+
+    while ((match = imageRegex.exec(assistantMessage.content || '')) !== null) {
+      images.push(`/${match[1]}`);
+    }
+
+    // Retirer les balises [IMAGE:...] du contenu du message
+    const cleanContent = (assistantMessage.content || '').replace(imageRegex, '').trim();
+
+    const responseMessage = {
+      role: assistantMessage.role,
+      content: cleanContent,
+      images: images.length > 0 ? images : undefined,
+    };
+
+    return NextResponse.json({ message: responseMessage });
   } catch (error: any) {
     console.error('Erreur API:', error);
     return NextResponse.json(
