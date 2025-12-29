@@ -75,7 +75,7 @@ export default function Home() {
 
   const quickQuestions = [
     'Dis m\'en plus sur l\'appartement',
-    'Où sont les oreillers ?',
+    'Comment utiliser le canapé lit BZ ?',
     'Je veux laver mon linge',
     'Qu\'est-ce qu\'il y a au cinéma ce soir ?',
   ];

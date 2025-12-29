@@ -35,6 +35,28 @@ Lave-linge : Commun dans le patio de l'immeuble, la lessive se trouve dans le me
 Sèche-linge : Commun dans le patio de l'immeuble (ne pas utiliser entre 22h et 7h)
 Étendoir : Dans le placard a balais de l'appartement
 
+=== CANAPÉ LIT BZ ===
+Le canapé se transforme facilement en lit double. Voici comment l'utiliser :
+
+OUVERTURE :
+1. Retirez les coussins du canapé
+2. Attrapez le cadre métallique situé sous l'assise
+3. Tirez doucement vers vous en faisant ROULER le matelas sur ses roulettes
+4. Important : le matelas doit impérativement rouler sur les roulettes. S'il ne roule pas, repositionnez-le légèrement
+5. Le mécanisme se déplie naturellement et se met à plat sans effort
+6. Une fois déplié, le lit est prêt à l'emploi
+
+FERMETURE :
+1. Soulevez légèrement le matelas
+2. Faites-le ROULER en sens inverse sur ses roulettes
+3. Le mécanisme se replie naturellement
+4. Replacez les coussins sur le canapé
+
+Conseil : Le système est conçu pour être facile à manipuler. Pas besoin de forcer, tout s'enclenche naturellement dans les deux sens. L'essentiel est de bien faire rouler le matelas sur ses roulettes.
+
+Photos disponibles : BZouverture.gif, BZfermeture.gif
+(Pour voir les démonstrations en vidéo, demandez au chatbot)
+
 === ÉLECTROMÉNAGER ===
 Télévision : ...
 Comment allumer la TV : Il faut allumer la télécommande Amazon, pour regarder les chaines en direct, il faut lancer l'application Molotov tv. Abonnement prime Video disponible. Merci de ne rien acheter ou louer sur la plateforme VOD.
