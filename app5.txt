@@ -69,8 +69,14 @@ POUR ALLUMER LA TV :
 
 POUR REGARDER LES CHAÎNES TV EN DIRECT :
 1. Depuis l'écran d'accueil du Fire TV Stick, lancez l'application Molotov TV (icône bleue avec un M)
-2. Molotov vous donne accès gratuitement à toutes les chaînes de la TNT française (TF1, France 2, France 3, M6, Arte, etc.)
-3. Note : Les chaînes payantes (Canal+, BeIN Sports, etc.) ne sont pas disponibles
+2. Molotov vous donne accès gratuitement aux chaînes suivantes :
+   - Généralistes : France 2, France 3, France 4, France 5, Arte, Chérie 25
+   - Actualités : BFMTV, CNEWS, franceinfo, LCP, Public Sénat, France 24, BFM Business
+   - Documentaires : RMC Découverte, RMC Story
+   - Films et séries : Ciné+ Frisson, Ciné+ émotion, Ciné+ family, Ciné+ classique
+   - Sports : L'Équipe, Sport en France
+   - Jeunesse : Okoo, Kabillion
+3. Note : Les chaînes payantes (TF1, M6, Canal+, BeIN Sports, etc.) ne sont pas disponibles
 
 AUTRES CONTENUS DISPONIBLES :
 - Amazon Prime Video est accessible (abonnement inclus)
