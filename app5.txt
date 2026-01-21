@@ -58,8 +58,30 @@ Photos disponibles : BZouverture.gif, BZfermeture.gif
 (Pour voir les démonstrations en vidéo, demandez au chatbot)
 
 === ÉLECTROMÉNAGER ===
-Télévision : ...
-Comment allumer la TV : Il faut allumer la télécommande Amazon, pour regarder les chaines en direct, il faut lancer l'application Molotov tv. Abonnement prime Video disponible. Merci de ne rien acheter ou louer sur la plateforme VOD.
+
+== TÉLÉVISION ET FIRE TV STICK ==
+La télévision fonctionne avec un Fire TV Stick Amazon branché dessus.
+
+POUR ALLUMER LA TV :
+1. Prenez la télécommande Amazon Fire TV (petite télécommande noire avec le logo Amazon)
+2. Appuyez sur n'importe quel bouton pour allumer le Fire TV Stick
+3. La TV devrait s'allumer automatiquement. Si ce n'est pas le cas, allumez-la avec sa propre télécommande et sélectionnez la source HDMI correspondante
+
+POUR REGARDER LES CHAÎNES TV EN DIRECT :
+1. Depuis l'écran d'accueil du Fire TV Stick, lancez l'application Molotov TV (icône bleue avec un M)
+2. Molotov vous donne accès gratuitement à toutes les chaînes de la TNT française (TF1, France 2, France 3, M6, Arte, etc.)
+3. Note : Les chaînes payantes (Canal+, BeIN Sports, etc.) ne sont pas disponibles
+
+AUTRES CONTENUS DISPONIBLES :
+- Amazon Prime Video est accessible (abonnement inclus)
+- Important : Merci de ne rien acheter ni louer sur la plateforme VOD
+
+NAVIGATION :
+- Utilisez le cercle directionnel pour naviguer dans les menus
+- Bouton central pour sélectionner
+- Bouton retour (flèche) pour revenir en arrière
+- Bouton maison pour retourner à l'écran d'accueil
+
 Télécommandes : ...
 Aspirateur : dans le placard a balais, pour le vider, utiliser le bouton poussoir frontal pour ouvrir le collecteur, ensuite il suffit de tirer la partie filtre vers le haut pour avoir acces au collecteur et le vider.
 Fer à repasser : ...
