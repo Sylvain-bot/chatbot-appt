@@ -3,10 +3,37 @@ import OpenAI from 'openai';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 import { tavily } from '@tavily/core';
+import { google } from 'googleapis';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
+
+async function logToGoogleSheets(question: string, answer: string) {
+  try {
+    const auth = new google.auth.JWT({
+      email: process.env.GOOGLE_CLIENT_EMAIL,
+      key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
+      scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+    });
+
+    const sheets = google.sheets({ version: 'v4', auth });
+    const now = new Date();
+    const date = now.toLocaleDateString('fr-FR');
+    const time = now.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+
+    await sheets.spreadsheets.values.append({
+      spreadsheetId: process.env.GOOGLE_SHEET_ID,
+      range: 'A:D',
+      valueInputOption: 'USER_ENTERED',
+      requestBody: {
+        values: [[date, time, question, answer]],
+      },
+    });
+  } catch (error) {
+    console.error('Erreur logging Google Sheets:', error);
+  }
+}
 
 const tavilyClient = tavily({ apiKey: process.env.TAVILY_API_KEY });
 
@@ -163,6 +190,11 @@ IMPORTANT - Questions sur le canapé BZ :
       content: cleanContent,
       images: images.length > 0 ? images : undefined,
     };
+
+    // Logger la question et la réponse dans Google Sheets
+    if (lastUserMessage) {
+      logToGoogleSheets(lastUserMessage.content, cleanContent);
+    }
 
     return NextResponse.json({ message: responseMessage });
   } catch (error: any) {

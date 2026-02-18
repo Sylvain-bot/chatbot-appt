@@ -28,6 +28,12 @@ yarn-error.log*
 # vercel
 .vercel
 
+# credentials Google (ne jamais commiter)
+*.json
+!package.json
+!tsconfig.json
+!vercel.json
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
