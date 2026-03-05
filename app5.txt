@@ -9,7 +9,7 @@ Heures de départ : 10h
 
 === WIFI ===
 Nom du réseau (SSID) : SFR_A472
-Mot de passe : txle3d679g29htjw9gh
+Mot de passe : txle3d679g29htljw9gh
 
 === CHAUFFAGE ET CLIMATISATION ===
 Type de chauffage : Electrique
