@@ -1,9 +1,9 @@
 INFORMATIONS APPARTEMENT - RUE DES TROIS ROIS
 
 === ACCÈS ET ARRIVÉE ===
-Code porte d'entrée immeuble : c0650
+Code porte d'entrée immeuble : c2712
 Étage : 3
-Code ou emplacement des clés : 3651
+Code ou emplacement des clés : 5655
 Heures d'arrivée : 15h
 Heures de départ : 10h
 
@@ -179,5 +179,5 @@ Parcs : ...
 === PROBLÈMES FRÉQUENTS ===
 Si le Wifi ne fonctionne pas : ...
 Si le chauffage ne marche pas : me prévenir via SMS au 0651875143
-Si vous êtes enfermés dehors : code de la porte d'entrée: C0650
+Si vous êtes enfermés dehors : code de la porte d'entrée: C2712
 En cas de panne d'électricité : ...
